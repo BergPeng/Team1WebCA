@@ -1,0 +1,261 @@
+body {
+    background: url(unoPicture/table.jpg);
+
+}
+
+/*unogame.jsp top*/
+#gameInformation {
+    /*border: dashed #4030ff;*/
+    top: 65px;
+    left: 10px;
+    width: 750px;
+    height: 150px;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+}
+
+#mess {
+    /*border: dashed #35e6ff;*/
+    width: 300px;
+    height: 80px;
+    position: relative;
+    display: inline-block;
+}
+
+.settingTable {
+    /*border: dashed #ff161e;*/
+    width: 310px;
+    height: auto;
+    position: relative;
+}
+
+#gameSetting {
+    /*border: dashed #1bff20;*/
+    width: 310px;
+    height: 130px;
+    position: relative;
+    display: inline-block;
+}
+
+#connectBtn {
+    margin: 10px;
+}
+
+/*playr.jsp show cardlist*/
+#sup-div {
+    /*margin:auto;*/
+    bottom: 0px;
+    position: absolute;
+    /*border: dashed #fff91f;*/
+    width: 100%;
+    height: 260px;
+    text-align: center;
+}
+
+.sub-div {
+    /*border: dashed #29ffff;*/
+    /*margin:auto;*/
+    width: 80px;
+    height: 258px;
+    overflow: visible;
+    display: inline-block;
+}
+
+/*player.jsp chat part*/
+#chatRoomDiv {
+    /*border: dotted #0fffa9;*/
+    top: 0px;
+    width: 455px;
+    height: 390px;
+    right: 0px;
+    position: absolute;
+}
+
+#playerChatDiv {
+    /*border: dashed #ff161e;*/
+    width: 450px;
+    height: 300px;
+    top: 0px;
+    right: 0px;
+    position: relative;
+    overflow: scroll;
+}
+
+#chatDiv {
+    /*border: groove #0fffa9;*/
+    width: 450px;
+    height: 80px;
+    right: 0px;
+    position: relative;
+    text-align: center;
+}
+
+#chatTable {
+    /*border: dashed #ff161e;*/
+    width: 380px;
+    height: auto;
+    position: relative;
+}
+
+#common-div {
+    margin: auto;
+    width: 90%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*plyaer.jsp top part*/
+#playerInfoTable {
+    /*border: dashed #ff161e;*/
+    width: 380px;
+    height: auto;
+    position: relative;
+}
+
+#gameInfoOfPlayer {
+    border: groove #0fffa9;
+    width: 450px;
+    height: 280px;
+}
+
+#needBtn {
+    /*background: url("back.png");*/
+    width: 70px;
+    height: 70px;
+    -moz-border-radius: 70px;
+    -webkit-border-radius: 70px;
+    border-radius: 70px;
+}
+
+#drawOneCard {
+    left: 50%;
+    position: relative;
+    bottom: auto;
+}
+
+
+/*unogame.jsp show card part*/
+#deckShowDiv {
+    /*border: dashed #ff161e;*/
+    width: 100%;
+    height: 260px;
+    position: relative;
+    display: inline-block;
+}
+
+#info-div {
+    /*border: dashed #1bff20;*/
+    /*background: #29ffff;*/
+    top: 0px;
+    right: 0px;
+    width: 450px;
+    height: 258px;
+    overflow: hidden;
+    text-align: left;
+    position: absolute;
+}
+
+#chats {
+    margin: auto;
+    width: 400px;
+}
+
+.discardDiv {
+    /*border: dashed #fff91f;*/
+    margin: 0px;
+    position: absolute;
+    width: 350px;
+    height: 258px;
+    text-align: center;
+}
+
+#cardListDiv {
+    /*border: dashed #9a20ff;*/
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    width: 350px;
+    height: 258px;
+    text-align: center;
+}
+
+#discardDiv {
+    /*border: dashed #35e6ff;*/
+    left: 350px;
+    width: 350px;
+    height: 258px;
+    text-align: center;
+    position: relative;
+}
+
+#deckCard {
+    /*border: dashed #4030ff;*/
+    left: 100px;
+    width: 50%;
+    height: 260px;
+    position: relative;
+    display: inline-block;
+}
+
+#allPlayerDiv {
+    margin-top: 10px;
+    /*border: dashed #ff121e;*/
+    width: 100%;
+    height: 260px;
+    position: absolute;
+    text-align: center;
+}
+
+.playerDiv {
+    margin-top: auto;
+    /*border: dashed #ff19db;*/
+    overflow: hidden;
+    position: relative;
+    width: 220px;
+    height: 260px;
+    text-align: center;
+    display: inline-block;
+}
+
+.playerName {
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+    height: 20px;
+}
+
+.numberOfCard {
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+    height: 20px;
+}
+
+/*from style.css*/
+h1 {
+    text-align: center;
+}
+
+.button {
+    display: inline;
+    color: #fff;
+    background-color: #DC143C;
+    padding: 8px;
+    margin: auto;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    box-shadow: none;
+    border: none;
+}
+
+.button:hover {
+    background-color: #ffb15e;
+}
+.button a, a:visited, a:hover, a:active {
+    color: #fff;
+    text-decoration: none;
+}

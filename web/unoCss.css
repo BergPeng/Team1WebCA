@@ -1,0 +1,27 @@
+#allPlayerDiv{
+	margin:0px auto;
+	width:570px;
+	text-align:center;
+}
+.playerDiv{
+	float:left;
+	margin-left:5px;
+	margin-right:5px;
+	text-align:center;
+}
+.playerName{
+	width:130px;
+	background-color:white;
+	border:1px solid black;
+	font-size:20px;
+}
+.playerImage{
+	width:130px;
+	border:1px solid black;
+}
+.numberOfCard{
+	width:130px;
+	background-color:white;
+	border:1px solid black;
+	font-size:20px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Team1 Uno Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <script src="lib/jquery-2.2.0.js"></script>
+        <script src="creategame.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Uno Game</h1>
+            <h2>Welcome to the Uno Game</h2>
+            <br />
+            <div id="addGame">
+                <div class="button">
+                    <a href="create.html">Create a game</a>
+                    <a href="../../../../AppData/Local/Temp/watch.url"></a>
+                </div>
+                <div class="button">
+                    <a href="login.html">Login</a>
+                    <a href="../../../../AppData/Local/Temp/watch.url"></a>
+                </div> 
+                
+                <!-- Create Game Form-->
+                <form id="createGameForm" action="CreateGame" method="post">
+                    <h3>Create >>> A new game</h3>  
+                    <table>
+                        <tr>
+                            <td>Game Room Name:</td>
+                            <td><input type="text" name="roomName" id="roomName"> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><span id="msg"></span></td>
+                        </tr>    
+                        <tr>
+                            <td >Max Player:</td>
+                            <td><input type="number" name="maxPlayer" id="maxPlayer" min="3" max="10" required></td>
+                        </tr>
+                        <tr>
+                            <td><p>Game Win Regulations</p></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="limit" checked="checked">Round</td>
+                            <td><input type="number" name="roundLimit" id="roundLimit" required></td>                            
+                        </tr>                        
+                    </table>
+                    <input type="submit" class="button" value="Create">
+                    <input type="reset" class="button" value="Cancel">
+                </form>
+                <!-- End Create Game Form-->                
+            </div>
+        </div>
+    </body>
+</html>

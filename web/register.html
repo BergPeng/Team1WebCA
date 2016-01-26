@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Team1 Uno Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <script src="lib/jquery-2.2.0.js"></script>        
+        <script src="register.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Uno Game</h1>
+            <h2>Welcome to the Uno Game</h2>
+            <br />
+            <div id="addGame">
+                <div class="button">
+                    <a href="create.html">Create a game</a>
+                    <a href="../../../../AppData/Local/Temp/watch.url"></a>
+                </div>
+                <div class="button">
+                    <a href="login.html">Login</a>
+                    <a href="../../../../AppData/Local/Temp/watch.url"></a>
+                </div>                
+                <!-- Registration Form-->
+                <form id="registrationForm" action="register" method="POST">
+                    <h3>Register >>> To be a player</h3>
+                    <table>
+                        <tr>
+                            <td>User ID:</td>
+                            <td><input type="text" name="userid" id="userid"></td>
+                            <td><button class="button" type="button" id="btncheck">Check User ID</button></td>
+                            <td><span id="idmsg"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="pwd" id="pwd"></td>
+                            <td colspan="2"><span class="pwdmsg"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password:</td>
+                            <td><input type="password" name="confirmpwd" id="confirmpwd"></td>
+                            <td colspan="2"><span class="pwdmsg"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td colspan="3"><input type="email" name="email" id="email"></td>
+                        </tr>                        
+                    </table>
+                    <table id="pictable">
+                        <h3>Choose a character !!!</h3><br><br><br>
+                        <tr>
+                            <td>
+                                <img src="playerImg/1.png">
+                            </td>
+                            <td>
+                                <img src="playerImg/2.png">
+                            </td>
+                            <td>
+                                <img src="playerImg/3.png">
+                            </td>
+                            <td>
+                                <img src="playerImg/4.png">
+                            </td>
+                            <td>
+                                <img src="playerImg/5.png">
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td>
+                                <input type="radio" name="picture" value="1.gif" checked>
+                            </td>
+                            <td>
+                                <input type="radio" name="picture" value="2.gif">
+                            </td>
+                            <td>
+                                <input type="radio" name="picture" value="3.gif">
+                            </td>
+                            <td>
+                                <input type="radio" name="picture" value="4.gif">
+                            </td>
+                            <td>
+                                <input type="radio" name="picture" value="5.gif">
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="button" class="button" name="btnConfirm" id="btnConfirm" value="Confirm">
+                    <input type="reset" class="button" value="Cancel">                    
+                </form> 
+                <!-- End Registration Form-->
+            </div>
+        </div>
+    </body>
+</html>
