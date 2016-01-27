@@ -9,7 +9,6 @@ package com.unogame.data;
 * 1. 13/01/2015; Akwila; Create Game Class
 * 
  */
-
 import com.unogame.data.Player;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -19,7 +18,6 @@ import java.util.Set;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import com.unogame.gamerule.Round;
 
 @Named("game")
 @SessionScoped
@@ -149,23 +147,29 @@ public class Game implements Serializable {
     }
 
     public void setNextPlayer() {
-        int indexxx = PlayerId.indexOf(this.CurrentPlayer);
-        int psize = PlayerId.size();
+        int indexxx = this.PlayerId.indexOf(this.CurrentPlayer);
+        System.out.println("The index of current plyaer===>"+indexxx);
+        int psize = this.PlayerId.size();
+        System.out.println("the size in the list ===>"  +psize);
         if (TurnPattern == true) {
             if (indexxx == psize - 1) {
                 this.CurrentPlayer = PlayerId.get(0);
             } else {
                 this.CurrentPlayer = PlayerId.get(indexxx + 1);
             }
-        } else if (indexxx == 0) {
+        } else{
+            if (indexxx == 0) {
+            System.out.println("enter here " + psize);
             this.CurrentPlayer = PlayerId.get(psize - 1);
-        } else {
+            } else {
             this.CurrentPlayer = PlayerId.get(indexxx - 1);
-        }
+            }
+        } 
     }
 
     public int addPlayer(Player pl) {
         PlayerId.add(pl.getPlayerId());
+        System.out.println("add player, the player size==>"+PlayerId.size());
         PlayerList.put(pl.getPlayerId(), pl);
         if (PlayerList.size() == maxPlayer) {
             return 1;
@@ -265,7 +269,8 @@ public class Game implements Serializable {
                 + "; Max Player : " + this.maxPlayer
                 + "; Open Game : " + this.openGame
                 + "; Last Card : " + this.LastCard.getCardId()
-                + "; Current Player : " + this.CurrentPlayer;
+                + "; Current Player : " + this.CurrentPlayer
+                + "; Turn Pattern : " + this.TurnPattern;
     }
 
     public Game copy() {
@@ -284,6 +289,11 @@ public class Game implements Serializable {
         copyGame.openGame = this.openGame;
         copyGame.roundLimit = this.roundLimit;
         return copyGame;
+    }
+
+    public void addPlayer1(Player pl) {
+        PlayerList.put(pl.getPlayerId(), pl);
+    
     }
 
 }

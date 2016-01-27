@@ -7,7 +7,7 @@ $(function () {
     console.log($("#room").val())
 
     $("#connectBtn").on("click", function () {
-        socket = new WebSocket("ws://localhost:19562/UnoGame/game/"
+        socket = new WebSocket("ws://"+window.location.host+"/UnoGame/game/"
                 + $("#room").val());
         socket.onopen = function () {
             $("#uppercase-msg").text("connected");
@@ -152,6 +152,7 @@ $(function () {
                 if (msg.message === "start round") {
                     $li.text("[" + msg.name + "] " + msg.message + ":" + msg.destination);
                     $("#chats").prepend($li);
+                    
                     roundStartAjax();
                 }
                 if (msg.message === "checkYo") {
@@ -185,6 +186,7 @@ $(function () {
                 }
             } else {
                 if (msg.message === "tell turn") {
+                    $(".numberOfCard").attr("value",'0');
                     specialMessage("starting deck", "all");
                 }
                 if (msg.message === "put 1 card") {
@@ -200,6 +202,7 @@ $(function () {
                     
                     
                     signsign = 1;
+                    
                     put1CardAjax(msg.cardId, msg.color);
                 }
             }
@@ -301,9 +304,9 @@ $(function () {
             url: "OpenFirstCard",
             type: "get",
             success: function (text11) {
-                if(text11.charAt(0)==='k'){
-                    openFirstCardAjax();
-                }
+//                if(text11.charAt(0)==='k'){
+//                    openFirstCardAjax();
+//                }
                 var array_data = String(text11).split(";");
                 giveCard12Message("prepare turn", "deck", array_data[0], array_data[1]);
             },
@@ -319,7 +322,7 @@ $(function () {
             url: "RoundStartEffect",
             type: "get",
             success: function () {
-                specialMessage("prepare turn1", "deck");
+                specialMessage("open first card", "deck");
             },
             error: function () {
 
@@ -340,6 +343,7 @@ $(function () {
             }
         });
     };
+    console.log(signsign);
     var put1CardAjax = function (par, par2) {
         var request;
 
@@ -623,6 +627,15 @@ $(function () {
         xmlhttp.send(null);
     };
 
+$("#btnCheck").on("click",function(){
+    var msg = {
+            name: "deck",
+            room: $("#room").val(),
+            message: "checkYo",
+            destination: "all"
+        };
+        socket.send(JSON.stringify(msg));
+})
 
 });
 

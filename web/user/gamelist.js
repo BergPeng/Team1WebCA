@@ -4,20 +4,20 @@ $(document).ready(function () {
         var room = jQuery(this).attr("id");
         console.log(room);
         $.ajax({
-            url:"http://localhost:19562/UnoGame/checkroom",
+            url:"http://"+window.location.host+":19562/UnoGame/checkroom",
             type:"POST",
             data:{"room":room},
             success: function () {
-                window.location.replace("http://localhost:19562/UnoGame/user/Player.jsp")
+                window.location.replace("http://"+window.location.host+"/UnoGame/user/Player.jsp")
             }
         })
     })
     
     $("#btnlogout").on("click",function(){
         $.ajax({
-           url: "http://localhost:19562/UnoGame/logout",
+           url: "http://"+window.location.host+"/UnoGame/logout",
            success: function(){
-               window.location.replace("http://localhost:19562/UnoGame/index.html")
+               window.location.replace("http://"+window.location.host+"/UnoGame/index.html")
            } 
         })
                 

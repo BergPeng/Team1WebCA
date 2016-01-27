@@ -20,9 +20,11 @@ public class GetReverse extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        gm.setTurnPattern(!gm.getTurnPattern());
+        Boolean turn = gm.getTurnPattern();
+        gm.setTurnPattern(!turn);
         PrintWriter out = response.getWriter();
-        out.print(gm.getCurrentPlayer());
+        String currentPlayer = gm.getCurrentPlayer();
+        out.print(currentPlayer);
         System.out.println("Current TurnPattern is " + gm.getTurnPattern());
     }
     @Override

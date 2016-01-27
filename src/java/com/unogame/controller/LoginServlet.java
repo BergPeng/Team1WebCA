@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet{
         String pic = um.getByName(userid).getPicture();
         // put user data to player
         pl.setPlayerId(userid);
-        pl.setPlayerName(password);
+        
         pl.setPlayerPic(pic);
         
         resp.setHeader("Access-Control-Allow-Origin", "*");

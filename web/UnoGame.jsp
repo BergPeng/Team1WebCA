@@ -55,6 +55,7 @@
                 <button id="endRoundBtn" style="font-size:18px;">End Round</button>
                 <div style="height:10px;"></div>
                 <button id="exitGameBtn" style="font-size:18px;">Exit Game</button>
+                <button id="btnCheck" >Check status</button>
             </div>
             <div style="clear:both; height:30px;"></div>
         </div>
@@ -71,11 +72,14 @@
              width:500px; height:300px; z-index:15;
              top:50%; left:50%; margin:-150px 0 0 -250px;
              background:white;">
-            <div style="height:80px;"></div>
+            <div style="height:20px;"></div>
+            Round <span id="plRound">1</span>
+            <div style="height:20px;"></div>
             Winner is : <span id="plWinner">Player 2</span><br />
             This Round Point : <span id="plScore">200</span>
             <div style="height:20px;"></div>
             <button id="newRoundBtn" style="font-size:24px;">New Round</button>
+            <button id="exitBtn" style="font-size:24px;">Exit Game</button>
         </div>
     </body>
 </html>

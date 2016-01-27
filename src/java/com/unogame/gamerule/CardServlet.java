@@ -36,7 +36,8 @@ public class CardServlet extends HttpServlet {
                 System.out.println("Remove Card : "+ cardId);
                 cd = ccard.getCard(cardId);                
                 player.putOne(cd);
-                out.print(player.getTotalCard());
+                int size = player.getTotalCard();
+                out.print(size);
                 break;
             default:
                 break;

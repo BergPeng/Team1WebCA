@@ -18,9 +18,10 @@ public class GetCurrentTurn extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String currentplayer = gm.getCurrentPlayer();
         PrintWriter out = response.getWriter();
-        out.print(gm.getCurrentPlayer());
-        System.out.println("Current Player is " + gm.getCurrentPlayer());
+        out.print(currentplayer);
+        System.out.println("Current Player is " + currentplayer);
     }
 
     @Override

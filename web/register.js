@@ -41,7 +41,7 @@ $(function(){
         var picture = $('input[name="picture"]:checked').val();
         console.log(usrid+"+"+pwd+"+"+confirmpwd+"+"+email+"+"+picture);
         $.ajax({
-            url:"http://localhost:19562/UnoGame/register",
+            url:"/UnoGame/register",
             type:"POST",
             data:{"userid":usrid,"pwd":pwd,"confirmpwd": confirmpwd, "email":email, "picture":picture},
             success: function () {

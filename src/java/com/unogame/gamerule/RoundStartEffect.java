@@ -1,6 +1,7 @@
 package com.unogame.gamerule;
 
 
+import com.unogame.data.Card;
 import com.unogame.data.Game;
 import com.unogame.data.CardDeck;
 import java.io.IOException;

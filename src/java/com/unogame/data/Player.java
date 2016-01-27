@@ -17,9 +17,9 @@ public class Player implements Serializable {
     private HashMap<Card, Boolean> HandCards;
     private HashMap<String, Integer> RoundScore;
 
-    public Player(String PlayerId, String PlayerName) {
+    public Player(String PlayerId, String PlayerPic) {
         this.PlayerId = PlayerId;
-        this.PlayerPic = PlayerName;
+        this.PlayerPic = PlayerPic;
         this.HandCards = new HashMap<>();
         this.RoundScore = new HashMap<>();
     }
@@ -31,19 +31,27 @@ public class Player implements Serializable {
         this.RoundScore = new HashMap<>();
     }
 
+    public Player(String playerId) {
+        this.PlayerId = playerId;
+        this.PlayerPic = "";
+        this.HandCards = new HashMap<>();
+        this.RoundScore = new HashMap<>();
+        ; //To change body of generated methods, choose Tools | Templates.
+    }
+
     public void setPlayerId(String PlayerId) {
         this.PlayerId = PlayerId;
     }
 
-    public void setPlayerName(String PlayerName) {
-        this.PlayerPic = PlayerName;
+    public void setPlayerPic(String PlayerPic) {
+        this.PlayerPic = PlayerPic;
     }
 
     public String getPlayerId() {
-        return PlayerId;
+        return this.PlayerId;
     }
 
-    public String getPlayerName() {
+    public String getPlayerPic() {
         return PlayerPic;
     }
 
@@ -91,9 +99,7 @@ public class Player implements Serializable {
         return st;
     }
 
-    public void setPlayerPic(String PlayerPic) {
-        this.PlayerPic = PlayerPic;
-    }
+
     
     public void Uno(Player p) {
         //???? Let think this one later

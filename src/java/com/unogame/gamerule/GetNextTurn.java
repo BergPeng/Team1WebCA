@@ -21,8 +21,9 @@ public class GetNextTurn extends HttpServlet {
             throws ServletException, IOException {
         gm.setNextPlayer();
         PrintWriter out = response.getWriter();
-        out.print(gm.getCurrentPlayer());
-        System.out.println("Current Player is " + gm.getCurrentPlayer());
+        String currentPlayer = gm.getCurrentPlayer();
+        out.print(currentPlayer);
+        System.out.println("Current Player is " + currentPlayer);
     }
 
     @Override

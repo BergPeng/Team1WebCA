@@ -1,6 +1,7 @@
 package com.unogame.controller;
 
 
+import com.unogame.data.Game;
 import com.unogame.data.Player;
 import java.io.IOException;
 import javax.inject.Inject;
@@ -32,7 +33,10 @@ public class RoomJoinCheck extends HttpServlet{
             
             System.out.println(pl);
             
-            rooms.getRoom().get(room).addPlayer(pl.copy());
+            Game gm= new Game();
+            gm = rooms.getRoom().get(room);
+            gm.addPlayer1(pl);
+            rooms.getRoom().put(room, gm);
             req.setAttribute("room", room);
             System.out.println("I will go to another page");
             

@@ -1,8 +1,8 @@
 $(function () {
     var socket = null;
     $("#changeColor").hide();
-    $("#connectBtn").on("click", function () {
-        socket = new WebSocket("ws://localhost:19562/UnoGame/user/player/"
+//    $("#connectBtn").on("click", function () {
+        socket = new WebSocket("ws://"+window.location.host+"/UnoGame/user/player/"
                 + $("#room").val());
         socket.onopen = function () {
             $("#uppercase-msg").text("connected");
@@ -97,6 +97,7 @@ $(function () {
                 if (msg.message === "start round") {
                     $li.text("[" + msg.name + "] " + msg.message + ":" + msg.destination);
                     $("#chats").prepend($li);
+                    $(".sub-div").remove();
                     playerRoundStartAjax();
                 }
                 if (msg.message === "lets begin") {
@@ -138,7 +139,7 @@ $(function () {
 
             }
         };
-    });
+//    });
 
     $("#msgBtn").on("click", function () {
         var msg = {

@@ -6,7 +6,7 @@ $(function (){
         var room = $("#roomName").val();
         console.log(room)
         $.ajax({
-            url:"http://localhost:19562/UnoGame/checkroomname",
+            url:"/UnoGame/checkroomname",
             type:"Get",
             data:{"room":room},
             success: function () {

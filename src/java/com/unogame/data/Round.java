@@ -10,47 +10,29 @@ package com.unogame.data;
 * 
  */
 
-import com.unogame.data.CardDeck;
-import com.unogame.data.Player;
 import java.io.Serializable;
-import java.util.ArrayList;
-import javax.enterprise.context.SessionScoped;
+import java.util.HashMap;
 
-public class Round {
+public class Round implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    
     private final int RoundId;
-    private final ArrayList<Player> PlayerList;
     private String Winner;
     private int Score;
-    CardDeck CardInDeck;
 
-    public Round(int RoundId, ArrayList<Player> PlayerList) {
+    public Round(int RoundId) {
         this.RoundId = RoundId;
-        this.PlayerList = PlayerList; // I hope it worked
         this.Winner = null;
         this.Score = 0;
-        CardInDeck = new CardDeck();
     }
 
-    public void roundEndProcess() {
-        // I am still not know what I should put in this function
-        // this function below I need to change. I will think about it later
-        /*int minScore = Integer.MAX_VALUE;
+    public int getRoundId() {
+        return RoundId;
+    }
 
-        for (Player pl : PlayerList) {
-            Set<Card> card = pl.getHandCards().keySet();
-            int tempTotalScore = 0;
-            for (Card cd : card) {
-                tempTotalScore += cd.getPoint();
-            }
-            if (minScore > tempTotalScore) {
-                minScore = tempTotalScore;
-                this.Winner = pl;
-            }
-            this.Score += tempTotalScore;
-        }
-        
-        // the case if winner doesn't have card and one other player have 1 zero card, we need to change it
-        this.Winner.addScore(this.Score);*/
+    public void roundEndProcess(String winner, int Score) {
+        this.Winner = winner;
+        this.Score = Score;
     }
 }

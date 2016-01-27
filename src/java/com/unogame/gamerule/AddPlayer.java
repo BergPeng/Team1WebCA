@@ -21,7 +21,7 @@ public class AddPlayer extends HttpServlet {
             throws ServletException, IOException {
         System.out.println("Add Player : " + request.getParameter("playerId"));
         String playerId = String.valueOf(request.getParameter("playerId"));
-        gm.addPlayer(new Player(playerId, playerId));
+        gm.addPlayer(new Player(playerId));
         System.out.println(gm);
     }
 
