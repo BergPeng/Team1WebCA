@@ -6,7 +6,7 @@ $(function () {
     var tempPlayer = 0;
     console.log($("#room").val())
 
-    $("#connectBtn").on("click", function () {
+//    $("#connectBtn").on("click", function () {
         socket = new WebSocket("ws://"+window.location.host+"/UnoGame/game/"
                 + $("#room").val());
         socket.onopen = function () {
@@ -207,7 +207,7 @@ $(function () {
                 }
             }
         };
-    });
+//    });
 
     $("#msgBtn").on("click", function () {
         var msg = {

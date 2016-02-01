@@ -26,7 +26,7 @@
             Game Room Name : 
             <input type="text" name="room" id="room" value="${room}" style="width:120px; font-size:18px;">
             <div style="height:5px;"></div>
-            <button id="connectBtn" style="font-size:18px;">Connect</button>
+<!--            <button id="connectBtn" style="font-size:18px;">Connect</button>-->
             <hr ><br>
             <button id="needBtn" style="font-size:18px;" disabled="true">Draw</button>
             <button id="endTurnBtn" style="font-size:18px;" disabled="true">End Turn</button>

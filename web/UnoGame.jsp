@@ -49,7 +49,7 @@
                 Round Limit : <br />
                 <input type="text" name="roundLimit" id="roundLimit" readonly="readonly" value="${game.roundLimit}" style="width:120px; font-size:18px;">
                 <div style="height:10px;"></div>
-                <button id="connectBtn" style="font-size:18px;">Connect</button>
+<!--                <button id="connectBtn" style="font-size:18px;">Connect</button>-->
                 <button id="startBtn" style="font-size:18px;">Start</button>
                 <div style="height:10px;"></div>
                 <button id="endRoundBtn" style="font-size:18px;">End Round</button>

@@ -1,6 +1,7 @@
 package com.unogame.biz;
 
 import com.unogame.model.Groups;
+import com.unogame.model.Hashgenerator;
 import com.unogame.model.User;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -28,9 +29,12 @@ public class UserManager {
         
         Boolean IsUserCorrect = false;
         User loginUser = em.find(User.class, id);
+        
+        
         if (null != loginUser) {
-            
-            if (loginUser.getPassword().equals(password)) {
+            Hashgenerator hashg = new Hashgenerator();
+            String hashpassowrd = hashg.generateHash(password);
+            if (loginUser.getPassword().equals(hashpassowrd)) {
                 IsUserCorrect = true;
             }
         }

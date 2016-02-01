@@ -29,14 +29,14 @@ public class LoginServlet extends HttpServlet{
         String userid = req.getParameter("userid");
         String password = req.getParameter("pwd");
  
-        try {
-            req.login(userid, password);
-        } catch (Exception e) {
-            System.out.println("Here is an acception ==>"+ e);
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            return;
-        }
-        
+//        try {
+//            req.login(userid, password);
+//        } catch (Exception e) {
+//            System.out.println("Here is an acception ==>"+ e);
+//            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+//            return;
+//        }
+//        
         String pic = um.getByName(userid).getPicture();
         // put user data to player
         pl.setPlayerId(userid);
@@ -52,18 +52,18 @@ public class LoginServlet extends HttpServlet{
         System.out.println("I will go back to login page");
         
         
-//        if(um.Login(userid, password)){  
-//            System.out.println("user ok");
-//            pl.setPlayerId(userid);
-//            pl.setPicture(um.getPicture(userid));
-//            System.out.println(pl);
-//            resp.setStatus(HttpServletResponse.SC_ACCEPTED);
-//
-//        }else{
-//            System.out.println("usr not correct");
-//            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-//            return;
-//        }
+        if(um.Login(userid, password)){  
+            System.out.println("user ok");
+            pl.setPlayerId(userid);
+            pl.setPlayerPic(um.getPicture(userid));
+            System.out.println(pl);
+            resp.setStatus(HttpServletResponse.SC_ACCEPTED);
+
+        }else{
+           System.out.println("usr not correct");
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            return;
+        }
     }
     
     

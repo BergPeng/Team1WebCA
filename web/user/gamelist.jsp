@@ -17,7 +17,7 @@
         <title>Game List</title>
     </head>
     <body>
-        <div id="weclome">Welcome <%= request.getRemoteUser() %></div>
+        <div id="weclome">Welcome ${player.playerId} </div>
         <div><button id="btnlogout">Logout</button></div>
         <ul>
             <c:forEach var = "ga" items="${gameRooms.room.values()}" >

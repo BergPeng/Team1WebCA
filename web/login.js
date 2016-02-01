@@ -1,5 +1,6 @@
 $(function(){
     
+    $("#divjoingame").hide();
     $("#btnLogin").on("click",function(){
         var usrid = $("#userid").val();
         var pwd = $("#pwd").val();
@@ -9,12 +10,15 @@ $(function(){
             type:"POST",
             data:{"userid":usrid, "pwd":pwd},
             success:function(){
-                alert("Login Successful")
-                window.location.replace("/UnoGame/user/gamelist.jsp")
+               alert("Login Successful")
+  
+               window.location.replace("user/gamelist.jsp")
             },
             error:function(){
                 alert("UserID or Password not correct!")
             }
         })
     })
+    
+   
 })
