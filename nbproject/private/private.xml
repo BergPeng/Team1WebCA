@@ -3,33 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/PlayerRoundStart.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/PlayerCheck.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/GetReverse.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/PlayerAddScore.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/data/Player.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/OpenFirstCard.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/CardServlet.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/EndRound.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/GetCurrentTurn.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/controller/RigesterNameCheck.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/web/UnoGame.js</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/data/Round.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/GetPreCard.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/ReceiveScore.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/GameStartEffect.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/GameCheck.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/controller/RoomJoinCheck.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/controller/GameNameCheck.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/GetOneCard.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/RoundStartEffect.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/data/Game.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/biz/UserManager.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/web/user/Player.js</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/AddPlayer.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/GetNextTurn.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/controller/CreateGame.java</file>
-            <file>file:/home/tobenothing/CA/Team1WebCA/src/java/com/unogame/gamerule/ChangeDiscardedCard.java</file>
+            <file>file:/home/berg/NetBeansProjects/Team1WebCA/web/UnoGame.jsp</file>
+            <file>file:/home/berg/NetBeansProjects/Team1WebCA/src/java/com/unogame/controller/PlayerSocket.java</file>
+            <file>file:/home/berg/NetBeansProjects/Team1WebCA/web/UnoGame.js</file>
         </group>
     </open-files>
 </project-private>

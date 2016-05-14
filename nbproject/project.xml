@@ -11,11 +11,17 @@
             <web-module-libraries>
                 <library dirs="200">
                     <file>${file.reference.java-json.jar}</file>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.guava-18.0.jar-1}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.java-json.jar-1}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
                     <file>${file.reference.guava-18.0.jar}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
