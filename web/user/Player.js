@@ -81,6 +81,7 @@ $(function () {
                             //console.log("new color ===>" + newCardId);
                             $("#" + thisCardId).remove();
                             //changeColor(thisCardId, newCardId);
+                            
                             passCard(thisCardId, newCardId);
                         });
                     } else if (text11.charAt(0) === thisCardId.charAt(0) && thisCardId.charAt(0) !== 'k') {
@@ -270,6 +271,7 @@ $(function () {
 
 
     var passCard = function (thisCardId, color) {
+        $("#changeColor").hide();
         var msg = {
             name: $("#name").val(),
             room: $("#room").val(),
